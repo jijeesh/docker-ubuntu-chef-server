@@ -1,4 +1,5 @@
-
+docker run -p 444:443 --privileged -h=chef -it ubuntu:12.04 /bin/bash
+docker run -p 443 --privileged -h=chef -it ubuntu:12.04 /bin/bash
 apt-get update
 dpkg-divert --local --rename --add /sbin/initctl
 ln -sf /bin/true /sbin/initctl

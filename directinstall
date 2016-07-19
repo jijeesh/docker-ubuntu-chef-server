@@ -1,5 +1,6 @@
 docker run -p 444:443 --privileged -h=chef -it ubuntu:12.04 /bin/bash
-docker run -p 443 --privileged -h=chef -it ubuntu:12.04 /bin/bash
+#docker run -p 443 --privileged -h=chef -it ubuntu:12.04 /bin/bash
+docker cp chef-server_11.1.6-1_amd64.deb 0f8b9e2e3d78:/
 apt-get update
 dpkg-divert --local --rename --add /sbin/initctl
 ln -sf /bin/true /sbin/initctl

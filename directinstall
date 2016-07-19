@@ -5,6 +5,7 @@ apt-get update
 dpkg-divert --local --rename --add /sbin/initctl
 ln -sf /bin/true /sbin/initctl
 sysctl -w kernel.shmmax=17179869184
+sysctl -w kernel.shmall=4194304
 dpkg -i chef-server_11.1.6-1_amd64.deb 
 /opt/chef-server/embedded/bin/runsvdir-start &
 chef-server-ctl  reconfigure

@@ -10,3 +10,14 @@ dpkg -i chef-server_11.1.6-1_amd64.deb
 /opt/chef-server/embedded/bin/runsvdir-start &
 chef-server-ctl  reconfigure
 ip addr
+
+
+
+###########################3333
+to change default port
+
+You have to create or open /etc/chef-server/chef-server.rb and add the line below
+
+nginx['ssl_port'] = 449
+
+then run: sudo chef-server-ctl reconfigure ; sudo chef-server-ctl restart
